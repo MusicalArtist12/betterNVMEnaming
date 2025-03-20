@@ -1,0 +1,11 @@
+[Unit]
+Description=Hard link nvme namespaces to nd*
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/opt/better-nvme-naming/startup.sh
+
+[Install]
+WantedBy=multi-user.target
